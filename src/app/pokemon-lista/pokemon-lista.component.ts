@@ -61,8 +61,8 @@ export class PokemonListaComponent implements OnInit {
     this.isLoading = true;
 
     /**
-     * Use the Pokedex service
-     * to load the next 14 Pokemon.
+     * Use the Pokemon service
+     * to load the next 12 Pokemon.
      */
     this.pokemonService.getAllPokemons(this.pokemon.length, 12)
       .then(pokemon => {
