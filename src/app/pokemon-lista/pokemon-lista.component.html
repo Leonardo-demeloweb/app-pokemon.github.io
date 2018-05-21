@@ -1,0 +1,43 @@
+<mat-toolbar color="primary" class="navbar-fixed" >
+    <span class="logo-toolbar" >Angular 5 Pokemon </span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="carregarPokemons()" [disabled]="isLoading">
+        <span *ngIf="!error">
+          <span *ngIf="isLoading" style="color:#C5CAE9">carregando...</span>
+          <span *ngIf="!isLoading"> + pokemons</span>
+        </span>
+        <span *ngIf="error">
+          Falha no carregamento
+        </span>
+    </button>
+</mat-toolbar>
+
+  <br>
+  <div class="container top-container">
+      <div class="col- grid-mobile grid-desktop grid-mobile-iphone" >
+        <div class="row">
+        <div *ngFor="let p of pokemon">
+          <mat-card [routerLink]="['/pokemon-detalhe', p.id]">
+          <div class="text-center" >
+            #{{ p.id }}
+          </div>
+          <img mat-card-md-image [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true" [attr.src]="p.sprite">
+          <div class="text-center">
+            {{ p.name | capitalize  }}
+          </div>
+          </mat-card>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <footer>
+      <div layout="row" class="text-center">
+          <a href="http://leonardo-desenvolvedor.surge.sh/" target="_blank"><h6>Leonardo de Melo dev. 2018</h6></a>
+      </div>
+  </footer>
+  
+   
+  
+  
+  

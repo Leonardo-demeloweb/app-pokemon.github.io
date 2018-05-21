@@ -1,0 +1,46 @@
+<mat-toolbar color="primary" class="navbar-fixed">
+    <span class="logo-toolbar" >  {{ pokemon.name | capitalize }}  </span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" [routerLink]="['/pokemons']">retornar</button> 
+</mat-toolbar>
+
+  <br>
+  <div class="container top-container">
+  <div class="col-">
+          <mat-card >
+              <div class="text-center">
+              <mat-card-subtitle>#{{ pokemon.id}}</mat-card-subtitle>
+               <img mat-card-lg-image [src]="pokemon.sprites.front_default">
+               <mat-card-title>{{ pokemon.name | capitalize }}</mat-card-title>
+              </div>
+          </mat-card>
+          <mat-card >
+              <div class="text-center"> <mat-card-title>Abilities:</mat-card-title></div>
+              <ul *ngFor="let pokemon of pokemon.abilities">
+                <li>{{ pokemon.ability.name }}</li>  
+              </ul>         
+          </mat-card>
+          <mat-card>
+              <div class="text-center"> <mat-card-title>Stats:</mat-card-title></div>
+              <ul  *ngFor="let pokemon of pokemon.stats" >
+                  <li >{{ pokemon.stat.name }}: {{ pokemon.base_stat }}</li>  
+              </ul>     
+          </mat-card>
+  </div>
+  </div>
+
+  <footer>
+      <div layout="row" class="text-center">
+           <a href="http://leonardo-desenvolvedor.surge.sh/" target="_blank"><h6>Leonardo de Melo dev. 2018</h6></a>
+      </div>
+  </footer>
+
+  
+
+
+  
+  
+   
+  
+  
+  

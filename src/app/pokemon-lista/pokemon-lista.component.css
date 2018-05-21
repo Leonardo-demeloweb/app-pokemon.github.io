@@ -1,0 +1,33 @@
+.logo-toolbar {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%  !important;
+ }
+
+.top-container {
+ margin-top: 50px ;
+ margin-bottom: 50px
+}
+
+.grid-desktop {
+  margin-left: 60px ;
+ }
+
+ 
+@media (max-width: 600px) 
+{
+  .grid-mobile-iphone {
+    margin-left: 40px ;
+   }
+}
