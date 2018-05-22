@@ -39,7 +39,7 @@ export class PokemonListaComponent implements OnInit {
   error: boolean = false;
 
   /**
-   * Inject the Pokedex service.
+   * Inject the Pokemon service.
    */
   constructor(private pokemonService: AppPokemonService, private http: Http, private route: ActivatedRoute, private router: Router, private httpClient: HttpClient ) { }
 
